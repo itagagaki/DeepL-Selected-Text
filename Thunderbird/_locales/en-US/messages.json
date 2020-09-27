@@ -1,0 +1,15 @@
+{
+  "app_name": {
+    "message": "DeepL selected text"
+  },
+  "app_desc": {
+    "message": "Unofficial DeepL translate extension for Thunderbird."
+  },
+  "app_author": {
+    "message": "Itagaki Fumihiko"
+  },
+  "menuItemTranslate": {
+    "message": "Translate with DeepL"
+  }
+}
+

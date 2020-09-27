@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_app_name__",
+  "description": "__MSG_app_desc__",
+  "version": "1.0.0",
+  "author": "__MSG_app_author__",
+  "applications": {
+    "gecko": {
+      "id": "deepl@itagagaki",
+      "strict_min_version": "68.0"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "48": "icon48.png",
+    "96": "icon96.png"
+  },
+  "permissions": [
+    "menus"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

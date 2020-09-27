@@ -1,0 +1,14 @@
+{
+  "app_name": {
+    "message": "DeepL翻訳"
+  },
+  "app_desc": {
+    "message": "選択テキストをDeepLで翻訳"
+  },
+  "app_author": {
+    "message": "板垣史彦"
+  },
+  "menuItemTranslate": {
+    "message": "DeepLで翻訳"
+  }
+}
