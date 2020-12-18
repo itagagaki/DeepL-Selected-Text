@@ -1,15 +1,15 @@
 {
-  "app_name": {
-    "message": "DeepL selected text"
-  },
-  "app_desc": {
-    "message": "Unofficial DeepL translate extension for Thunderbird."
-  },
-  "app_author": {
-    "message": "Itagaki Fumihiko"
-  },
-  "menuItemTranslate": {
-    "message": "Translate with DeepL"
-  }
-}
+  "app_name": { "message": "DeepL selected text" },
+  "app_desc": { "message": "Unofficial DeepL translate extension for Thunderbird." },
+  "app_author": { "message": "Itagaki Fumihiko" },
 
+  "menuItemTranslate": { "message": "Translate with DeepL" },
+
+  "open_in": { "message": "Open DeepL translator in a" },
+  "open_in_post": { "message": "." },
+
+  "tab": { "message": "tab" },
+  "window": { "message": "new window" },
+  "width": { "message": "width" },
+  "height": { "message": "height" }
+}

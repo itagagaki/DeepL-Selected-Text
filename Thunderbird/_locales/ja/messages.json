@@ -1,14 +1,15 @@
 {
-  "app_name": {
-    "message": "DeepL翻訳"
-  },
-  "app_desc": {
-    "message": "選択テキストをDeepLで翻訳"
-  },
-  "app_author": {
-    "message": "板垣史彦"
-  },
-  "menuItemTranslate": {
-    "message": "DeepLで翻訳"
-  }
+  "app_name": { "message": "DeepL翻訳" },
+  "app_desc": { "message": "選択テキストをDeepLで翻訳" },
+  "app_author": { "message": "板垣史彦" },
+
+  "menuItemTranslate": { "message": "DeepLで翻訳" },
+
+  "open_in": { "message": "DeepL翻訳を" },
+  "open_in_post": { "message": "で開く．" },
+
+  "tab": { "message": "タブ" },
+  "window": { "message": "新しいウィンドウ" },
+  "width": { "message": "幅" },
+  "height": { "message": "高さ" }
 }

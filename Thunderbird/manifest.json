@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_app_name__",
   "description": "__MSG_app_desc__",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "__MSG_app_author__",
   "applications": {
     "gecko": {
@@ -16,11 +16,17 @@
     "96": "icon96.png"
   },
   "permissions": [
-    "menus"
+    "menus",
+    "storage"
   ],
   "background": {
     "scripts": [
       "background.js"
     ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true,
+    "open_in_tab": false
   }
 }
