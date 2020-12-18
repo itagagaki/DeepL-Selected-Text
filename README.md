@@ -11,7 +11,7 @@ Please set it in the options page.
 1. Click the menu button and click Add-ons, or select Tools > Add-ons from the menu bar.
 2. Click the three-dot button on "DeepL selected text" and select Options, or click "DeepL selected text" and click Options.
 
-## Notice
+## Notes
 Depending on the version of Thunderbird, the "Translate with DeepL" item may not appear in the context menu after installing this extension.
 In that case, please restart Thunderbird once.
 
