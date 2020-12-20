@@ -19,10 +19,26 @@
     "menus",
     "storage"
   ],
+  "commands": {
+    "deepl": {
+      "suggested_key": { "default": "Ctrl+T" },
+      "description": "Translate selected text with DeepL"
+    }
+  },
   "background": {
     "scripts": [
       "background.js"
     ]
+  },
+  "experiment_apis": {
+    "Helper": {
+      "schema": "helper.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["Helper"]],
+        "script": "helper.js"
+      }
+    }
   },
   "options_ui": {
     "page": "options.html",

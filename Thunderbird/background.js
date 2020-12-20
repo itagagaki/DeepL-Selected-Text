@@ -33,3 +33,15 @@ messenger.menus.onClicked.addListener((info, tab) => {
     break;
   }
 });
+
+messenger.commands.onCommand.addListener((command) => {
+  switch (command) {
+  case "deepl":
+    messenger.Helper.getSelectedText().then(text => {
+      if (text && text.match(/\S/g)) {
+        goDeepL(text);
+      }
+    });
+    break;
+  }
+});
