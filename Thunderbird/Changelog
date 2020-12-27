@@ -1,3 +1,7 @@
+2020-12-27 V1.2.0
+Added keyboard shortcut. Ctrl+T now opens DeepL.
+Added options to specify the language of the source and target texts.
+
 2020-12-18 V1.1.0
 Added options page.
 DeepL can now be opened in a new window.

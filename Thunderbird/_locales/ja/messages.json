@@ -11,5 +11,23 @@
   "tab": { "message": "タブ" },
   "window": { "message": "新しいウィンドウ" },
   "width": { "message": "幅" },
-  "height": { "message": "高さ" }
+  "height": { "message": "高さ" },
+
+  "source_lang": { "message": "原文" },
+  "target_lang": { "message": "訳文" },
+  "lang_auto": { "message": "自動" },
+  "lang_de": { "message": "ドイツ語" },
+  "lang_en": { "message": "英語" },
+  "lang_en_gb": { "message": "英語 (イギリス)" },
+  "lang_en_us": { "message": "英語 (アメリカ)" },
+  "lang_fr": { "message": "フランス語" },
+  "lang_it": { "message": "イタリア語" },
+  "lang_ja": { "message": "日本語" },
+  "lang_es": { "message": "スペイン語" },
+  "lang_nl": { "message": "オランダ語" },
+  "lang_pl": { "message": "ポーランド語" },
+  "lang_pt": { "message": "ポルトガル語" },
+  "lang_pt_br": { "message": "ポルトガル語 (ブラジル)" },
+  "lang_ru": { "message": "ロシア語" },
+  "lang_zh": { "message": "中国語 (簡体字)" }
 }

@@ -7,12 +7,48 @@
 
 <body>
   <form id="options">
-    <label>__MSG_open_in__ </label>
-    <label><input name="target" type="radio" value="tab">__MSG_tab__</label>
-    <label><input name="target" type="radio" value="window">__MSG_window__</label>
-    (<label>__MSG_width__: <input name="width" type="text" size="4" value="1200"></label>,
-    <label>__MSG_height__: <input name="height" type="text" size="4" value="800"></label>)
-    <label>__MSG_open_in_post__</label>
+    <div>
+      <label>__MSG_open_in__ </label>
+      <label><input name="target" type="radio" value="tab">__MSG_tab__</label>
+      <label><input name="target" type="radio" value="window">__MSG_window__</label>
+      (<label>__MSG_width__: <input name="width" type="text" size="4" value="1200"></label>,
+      <label>__MSG_height__: <input name="height" type="text" size="4" value="800"></label>)
+      <label>__MSG_open_in_post__</label>
+    </div>
+    <div style="margin-top: 1em;">
+      <label>__MSG_source_lang__: </label>
+      <select id="source_lang">
+	<option value="?" selected>__MSG_lang_auto__</option>
+	<option value="DE">__MSG_lang_de__</option>
+	<option value="EN">__MSG_lang_en__</option>
+	<option value="FR">__MSG_lang_fr__</option>
+	<option value="IT">__MSG_lang_it__</option>
+	<option value="JA">__MSG_lang_ja__</option>
+	<option value="ES">__MSG_lang_es__</option>
+	<option value="NL">__MSG_lang_nl__</option>
+	<option value="PL">__MSG_lang_pl__</option>
+	<option value="PT">__MSG_lang_pt__</option>
+	<option value="RU">__MSG_lang_ru__</option>
+	<option value="ZH">__MSG_lang_zh__</option>
+      </select>
+      <label>__MSG_target_lang__: </label>
+      <select id="target_lang">
+	<option value="?" selected>__MSG_lang_auto__</option>
+	<option value="DE">__MSG_lang_de__</option>
+	<option value="EN-GB">__MSG_lang_en_gb__</option>
+	<option value="EN-US">__MSG_lang_en_us__</option>
+	<option value="FR">__MSG_lang_fr__</option>
+	<option value="IT">__MSG_lang_it__</option>
+	<option value="JA">__MSG_lang_ja__</option>
+	<option value="ES">__MSG_lang_es__</option>
+	<option value="NL">__MSG_lang_nl__</option>
+	<option value="PL">__MSG_lang_pl__</option>
+	<option value="PT-PT">__MSG_lang_pt__</option>
+	<option value="PT-BR">__MSG_lang_pt_br__</option>
+	<option value="RU">__MSG_lang_ru__</option>
+	<option value="ZH">__MSG_lang_zh__</option>
+      </select>
+    </div>
   </form>
   <script src="options.js"></script>
 </body>

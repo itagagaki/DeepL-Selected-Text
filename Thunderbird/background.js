@@ -1,7 +1,9 @@
 function goDeepL(text)
 {
-  const url = 'https://www.deepl.com/translator#?/?/'+encodeURI(text);
-  messenger.storage.local.get(['target', 'width', 'height'], function(result) {
+  messenger.storage.local.get(['target', 'width', 'height', 'source_lang', 'target_lang'], function(result) {
+    const source_lang = result.source_lang ? result.source_lang : '?';
+    const target_lang = result.target_lang ? result.target_lang : '?';
+    const url = 'https://www.deepl.com/translator#'+source_lang+'/'+target_lang+'/'+encodeURI(text);
     switch (result.target) {
     case "window":
       messenger.windows.create({url: url, type: "popup", width: Number(result.width), height: Number(result.height)});

@@ -5,19 +5,35 @@ function saveOptions(e) {
   });
   const width = document.getElementsByName('width')[0].value;
   const height = document.getElementsByName('height')[0].value;
+  const source_lang = document.getElementById('source_lang').value;
+  const target_lang = document.getElementById('target_lang').value;
   browser.storage.local.set({
     "width": width,
-    "height": height
+    "height": height,
+    "source_lang": source_lang,
+    "target_lang": target_lang
   });
   e.preventDefault();
 }
 
+function selectLangOption(id, lang) {
+  const select = document.getElementById(id);
+  if (select) {
+    if (!lang) {
+      lang = '?';
+    }
+    select.value = lang;
+  }
+}
+
 function restoreOptions() {
-  browser.storage.local.get('target', function(result) {
+  browser.storage.local.get(['target', 'source_lang', 'target_lang'], function(result) {
     const target = result.target ? result.target : 'tab';
     Array.from(document.getElementsByName('target')).forEach(
       elem => { elem.checked = elem.value == target; }
     );
+    selectLangOption('source_lang', result.source_lang);
+    selectLangOption('target_lang', result.target_lang);
   });
 }
 
@@ -78,6 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
   restoreOptions();
 });
 
-document.querySelectorAll('input').forEach(elem => {
+document.querySelectorAll('input, select').forEach(elem => {
   elem.addEventListener("change", e => saveOptions(e));
 });
