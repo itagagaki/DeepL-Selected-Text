@@ -3,6 +3,7 @@
   "app_desc": { "message": "選択テキストをDeepLで翻訳" },
   "app_author": { "message": "板垣史彦" },
 
+  "shortcut_desc": { "message": "選択テキストをDeepLで翻訳" },
   "menuItemTranslate": { "message": "DeepLで翻訳" },
 
   "open_in": { "message": "DeepL翻訳を" },

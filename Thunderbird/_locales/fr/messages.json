@@ -1,0 +1,34 @@
+{
+  "app_name": { "message": "Traducteur DeepL" },
+  "app_desc": { "message": "Traduit le texte sélectionné avec DeepL." },
+  "app_author": { "message": "Itagaki Fumihiko" },
+
+  "shortcut_desc": { "message": "Traduire le texte sélectionné avec DeepL" },
+  "menuItemTranslate": { "message": "Traduire avec DeepL" },
+
+  "open_in": { "message": "Ouvrir la traduction dans" },
+  "open_in_post": { "message": "." },
+
+  "tab": { "message": "un onglet" },
+  "window": { "message": "une fenêtre" },
+  "width": { "message": "largeur " },
+  "height": { "message": "hauteur " },
+
+  "source_lang": { "message": "Langue source " },
+  "target_lang": { "message": "Langue cible " },
+  "lang_auto": { "message": "automatique" },
+  "lang_de": { "message": "allemand" },
+  "lang_en": { "message": "anglais" },
+  "lang_en_gb": { "message": "anglais (britannique)" },
+  "lang_en_us": { "message": "anglais (américain)" },
+  "lang_fr": { "message": "français" },
+  "lang_it": { "message": "italien" },
+  "lang_ja": { "message": "japonais" },
+  "lang_es": { "message": "espagnol" },
+  "lang_nl": { "message": "néerlandais" },
+  "lang_pl": { "message": "polonais" },
+  "lang_pt": { "message": "portugais" },
+  "lang_pt_br": { "message": "portugais (brésilien)" },
+  "lang_ru": { "message": "russe" },
+  "lang_zh": { "message": "chinois" }
+}

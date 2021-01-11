@@ -22,7 +22,7 @@
   "commands": {
     "deepl": {
       "suggested_key": { "default": "Ctrl+T" },
-      "description": "Translate selected text with DeepL"
+      "description": "__MSG_shortcut_desc__"
     }
   },
   "background": {
