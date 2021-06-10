@@ -1,9 +1,22 @@
 function goDeepL(text)
 {
   messenger.storage.local.get(['target', 'width', 'height', 'source_lang', 'target_lang'], function(result) {
-    const source_lang = result.source_lang ? result.source_lang : '?';
-    const target_lang = result.target_lang ? result.target_lang : '?';
-    const url = 'https://www.deepl.com/translator#'+source_lang+'/'+target_lang+'/'+encodeURI(text);
+    let source_lang = result.source_lang ? result.source_lang : '?';
+    let target_lang = result.target_lang ? result.target_lang : '?';
+
+    if (source_lang == '?') {
+      source_lang = 'default';
+    }
+
+    if (target_lang == '?') {
+      target_lang = chrome.i18n.getUILanguage();
+    }
+
+    const escapedText = text.replace(/\\/g, '\\\\')
+                            .replace(/\//g, '\\/')
+                            .replace(/\|/g, '\\|');
+
+    const url = 'https://www.deepl.com/translator#'+source_lang+'/'+target_lang+'/'+encodeURIComponent(escapedText);
     switch (result.target) {
     case "window":
       messenger.windows.create({url: url, type: "popup", width: Number(result.width), height: Number(result.height)});
