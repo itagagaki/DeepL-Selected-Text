@@ -1,3 +1,10 @@
+2021-08.15 V1.4.0
+Added keyboard shortcut Ctrl+Shift+X
+
+2021-06-10 V1.3.0
+Dealing with specification changes on DeepL.
+Added languages: Bulgarian, Czech, Danish, Greek, Estonian, Finnish, Hungarian, Lithuanian, Latvian, Romanian, Slovak, Slovenian, and Swedish.
+
 2021-01-11 V1.2.1
 Added French locale. (Thanks to DenBar [DenB10])
 
