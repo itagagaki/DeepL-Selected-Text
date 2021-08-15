@@ -5,7 +5,7 @@ var Helper = class extends ExtensionCommon.ExtensionAPI {
     return {
       Helper: {
         async getSelectedText() {
-          return Services.wm.getMostRecentWindow("mail:3pane").document.commandDispatcher.focusedWindow.getSelection().toString();
+          return Services.wm.getMostRecentWindow(null).document.commandDispatcher.focusedWindow.getSelection().toString();
         }
       }
     };
