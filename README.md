@@ -2,7 +2,7 @@
 Translate selected text with DeepL
 
 ## Overview
-This extension for Thunderbird 68+ adds a "Translate with DeepL" item to the context menu. When you select text and use it, a tab will open up, and it will translate the text for you at DeepL. You can also use Ctrl+T to translate.
+This extension for Thunderbird 68+ adds a "Translate with DeepL" item to the context menu. When you select text and use it, a tab will open up, and it will translate the text for you at DeepL. You can also use Ctrl+T or Ctrl+Shift+X to translate.
 
 You can also choose to have it open in a new window instead of a tab.
 Please set it in the options page.
@@ -17,7 +17,7 @@ Depending on the version of Thunderbird, the "Translate with DeepL" item may not
 In that case, please restart Thunderbird once.
 
 ## 概要
-Thunderbird 68+用のこの拡張機能は、コンテキストメニューに「DeepLで翻訳」の項目を追加します。テキストを選択してそれを使用するとタブが開き、DeepLでテキストを翻訳します。Ctrl+Tで翻訳することもできます。
+Thunderbird 68+用のこの拡張機能は、コンテキストメニューに「DeepLで翻訳」の項目を追加します。テキストを選択してそれを使用するとタブが開き、DeepLでテキストを翻訳します。Ctrl+T または Ctrl+Shift+X で翻訳することもできます。
 
 タブではなく新しいウィンドウで開くようにすることもできます。
 オプションページで設定して下さい。
