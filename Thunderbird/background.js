@@ -52,6 +52,7 @@ messenger.menus.onClicked.addListener((info, tab) => {
 messenger.commands.onCommand.addListener((command) => {
   switch (command) {
   case "deepl":
+  case "deepl2":
     messenger.Helper.getSelectedText().then(text => {
       if (text && text.match(/\S/g)) {
         goDeepL(text);
