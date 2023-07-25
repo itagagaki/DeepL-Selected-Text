@@ -30,10 +30,13 @@
   "lang_fi": { "message": "Finnish" },
   "lang_fr": { "message": "French" },
   "lang_hu": { "message": "Hungarian" },
+  "lang_id": { "message": "Indonessian" },
   "lang_it": { "message": "Italian" },
   "lang_ja": { "message": "Japanese" },
+  "lang_ko": { "message": "Korean" },
   "lang_lt": { "message": "Lithuanian" },
   "lang_lv": { "message": "Latvian" },
+  "lang_nb": { "message": "Norwegian (Bokmål)" },
   "lang_nl": { "message": "Dutch" },
   "lang_pl": { "message": "Polish" },
   "lang_pt": { "message": "Portuguese" },
@@ -43,5 +46,7 @@
   "lang_sk": { "message": "Slovak" },
   "lang_sl": { "message": "Slovenian" },
   "lang_sv": { "message": "Swedish" },
+  "lang_tr": { "message": "Turkish" },
+  "lang_uk": { "message": "Ukrainian" },
   "lang_zh": { "message": "Chinese" }
 }

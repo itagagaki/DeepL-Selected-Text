@@ -30,10 +30,13 @@
   "lang_fi": { "message": "フィンランド語" },
   "lang_fr": { "message": "フランス語" },
   "lang_hu": { "message": "ハンガリー語" },
+  "lang_id": { "message": "インドネシア語" },
   "lang_it": { "message": "イタリア語" },
   "lang_ja": { "message": "日本語" },
+  "lang_ko": { "message": "韓国語" },
   "lang_lt": { "message": "リトアニア語" },
   "lang_lv": { "message": "ラトビア語" },
+  "lang_nb": { "message": "ノルウェー語（ブークモール）" },
   "lang_nl": { "message": "オランダ語" },
   "lang_pl": { "message": "ポーランド語" },
   "lang_pt": { "message": "ポルトガル語" },
@@ -43,5 +46,7 @@
   "lang_sk": { "message": "スロバキア語" },
   "lang_sl": { "message": "スロベニア語" },
   "lang_sv": { "message": "スウェーデン語" },
+  "lang_tr": { "message": "トルコ語" },
+  "lang_uk": { "message": "ウクライナ語" },
   "lang_zh": { "message": "中国語 (簡体字)" }
 }

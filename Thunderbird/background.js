@@ -1,11 +1,14 @@
 function goDeepL(text)
 {
+  // A workaround for the DeepL translator bug.
+  messenger.cookies.remove({name: "releaseGroups", url: "https://www.deepl.com"});
+
   messenger.storage.local.get(['target', 'width', 'height', 'source_lang', 'target_lang'], function(result) {
     let source_lang = result.source_lang ? result.source_lang : '?';
     let target_lang = result.target_lang ? result.target_lang : '?';
 
     if (source_lang == '?') {
-      source_lang = 'default';
+      source_lang = 'null';
     }
 
     if (target_lang == '?') {
@@ -17,6 +20,8 @@ function goDeepL(text)
                             .replace(/\|/g, '\\|');
 
     const url = 'https://www.deepl.com/translator#'+source_lang+'/'+target_lang+'/'+encodeURIComponent(escapedText);
+    //console.log(url);
+
     switch (result.target) {
     case "window":
       messenger.windows.create({url: url, type: "popup", width: Number(result.width), height: Number(result.height)});
