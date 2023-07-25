@@ -1,5 +1,6 @@
 2023-07-25 V1.6.0
 Added German locale.
+Fix font size of the option page.
 Adding and modifying language codes.
 Remove a cookie before every request to avoid the DeepL bug (their degradation).
 

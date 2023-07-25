@@ -7,7 +7,8 @@
   "applications": {
     "gecko": {
       "id": "deepl@itagagaki",
-      "strict_min_version": "68.0"
+      "strict_min_version": "68.0",
+      "strict_max_version": "115.*"
     }
   },
   "default_locale": "en-US",
