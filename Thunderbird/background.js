@@ -1,8 +1,5 @@
 function goDeepL(text)
 {
-  // A workaround for the DeepL translator bug.
-  messenger.cookies.remove({name: "releaseGroups", url: "https://www.deepl.com"});
-
   messenger.storage.local.get(['target', 'width', 'height', 'source_lang', 'target_lang'], function(result) {
     let source_lang = result.source_lang ? result.source_lang : '?';
     let target_lang = result.target_lang ? result.target_lang : '?';
@@ -24,7 +21,7 @@ function goDeepL(text)
 
     switch (result.target) {
     case "window":
-      messenger.windows.create({url: url, type: "popup", width: Number(result.width), height: Number(result.height)});
+      messenger.windows.create({url: url, type: "normal", width: Number(result.width), height: Number(result.height)});
       break;
     case "tabs":
     default:
@@ -39,6 +36,25 @@ function onCreated() {
     console.log('DeepL:'+`Error: ${messenger.runtime.lastError}`);
   }
 }
+
+/**/
+
+// Workaround for the DeepL translator bug
+function addressDeepLBug(details)
+{
+  if (details.url.match(/^https:\/\/.*\.deepl\.com/)) {
+    messenger.cookies.get({name: "releaseGroups", url: "https://www.deepl.com"})
+      .then(releaseGroups => {
+        if (releaseGroups != null) {
+          messenger.cookies.remove({name: "releaseGroups", url: "https://www.deepl.com"})
+            .finally(() => chrome.tabs.reload(details.tabId));
+        }
+      });
+  }
+}
+messenger.webNavigation.onCompleted.addListener(addressDeepLBug);
+
+/**/
 
 messenger.menus.create({
   id: "menuDeepL",
