@@ -1,14 +1,14 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_app_name__",
   "description": "__MSG_app_desc__",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "author": "__MSG_app_author__",
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "deepl@itagagaki",
-      "strict_min_version": "68.0",
-      "strict_max_version": "115.*"
+      "strict_min_version": "128.0",
+      "strict_max_version": "128.*"
     }
   },
   "default_locale": "en-US",
@@ -20,7 +20,9 @@
     "menus",
     "storage",
     "webNavigation",
-    "cookies",
+    "cookies"
+  ],
+  "host_permissions": [
     "*://*.deepl.com/*"
   ],
   "commands": {
@@ -50,7 +52,6 @@
   },
   "options_ui": {
     "page": "options.html",
-    "browser_style": true,
     "open_in_tab": false
   }
 }
