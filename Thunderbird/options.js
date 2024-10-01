@@ -1,17 +1,10 @@
 function saveOptions(e) {
-  const targetValue = Array.from(document.getElementsByName('target')).find(elem => elem.checked).value;
   browser.storage.local.set({
-    "target": targetValue
-  });
-  const width = document.getElementsByName('width')[0].value;
-  const height = document.getElementsByName('height')[0].value;
-  const source_lang = document.getElementById('source_lang').value;
-  const target_lang = document.getElementById('target_lang').value;
-  browser.storage.local.set({
-    "width": width,
-    "height": height,
-    "source_lang": source_lang,
-    "target_lang": target_lang
+    "target": Array.from(document.getElementsByName('target')).find(elem => elem.checked).value,
+    "width": document.getElementsByName('width')[0].value,
+    "height": document.getElementsByName('height')[0].value,
+    "source_lang": document.getElementById('source_lang').value,
+    "target_lang": document.getElementById('target_lang').value
   });
   e.preventDefault();
 }
@@ -27,8 +20,8 @@ function selectLangOption(id, lang) {
 }
 
 function restoreOptions() {
-  browser.storage.local.get(['target', 'source_lang', 'target_lang'], function(result) {
-    const target = result.target ? result.target : 'tab';
+  browser.storage.local.get(['target', 'source_lang', 'target_lang'], result => {
+    const target = result.target ?? 'tab';
     Array.from(document.getElementsByName('target')).forEach(
       elem => { elem.checked = elem.value == target; }
     );

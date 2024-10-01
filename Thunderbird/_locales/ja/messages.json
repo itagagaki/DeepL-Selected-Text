@@ -17,6 +17,7 @@
   "source_lang": { "message": "原文" },
   "target_lang": { "message": "訳文" },
   "lang_auto": { "message": "自動" },
+  "lang_ar": { "message": "アラビア語" },
   "lang_bg": { "message": "ブルガリア語" },
   "lang_cs": { "message": "チェコ語" },
   "lang_da": { "message": "デンマーク語" },

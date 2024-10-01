@@ -17,6 +17,7 @@
   "source_lang": { "message": "Ausgangssprache" },
   "target_lang": { "message": "Zielsprache" },
   "lang_auto": { "message": "Auto" },
+  "lang_ar": { "message": "Arabisch" },
   "lang_bg": { "message": "Bulgarisch" },
   "lang_cs": { "message": "Tschechisch" },
   "lang_da": { "message": "Dänisch" },
