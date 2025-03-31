@@ -86,6 +86,12 @@ async function goDeepL(text, allowReload = true)
 
 }
 
+async function getSelection(tab) {
+  return browser.tabs.sendMessage(tab.id, {
+    action: "getSelection"
+  });
+}
+
 messenger.menus.removeAll();
 messenger.menus.create({
 "id": "menuDeepL",
@@ -105,20 +111,51 @@ messenger.menus.onClicked.addListener((info, tab) => {
   }
 });
 
-messenger.commands.onCommand.addListener((command) => {
+messenger.commands.onCommand.addListener((command, tab) => {
   switch (command) {
-  case "deepl":
-  case "deepl2":
-    messenger.Helper.getSelectedText().then(text => {
-      if (text && text.match(/\S/g)) {
-        goDeepL(text);
-      }
-    });
-    break;
+    case "deepl":
+    case "deepl2":
+      getSelection(tab).then(text => {
+        if (text && text.match(/\S/g)) {
+          goDeepL(text);
+        }
+      });
+      break;
   }
 });
 
 
+// Load selection handler into all currently open tabs (the functions to register
+// scripts do not load scripts into already open tabs, only content_script manifest
+// entries can do that).
+messenger.tabs
+  .query({ type: ["messageCompose", "messageDisplay", "mail"] })
+  .then(async tabs => {
+    for (let tab of tabs) {
+      if (tab.type == "mail") {
+        // If this is a message, we nee to inject the script, otherwise the content
+        // script handler already did the work.
+        let { messages } = await browser.messageDisplay.getDisplayedMessages(tab.id);
+        console.log("messages.length", messages.length);
+        if (messages.length != 1) {
+          continue;
+        }
+      }
+      messenger.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["selectionHandler.js"]
+      });
+    }
+  });
+
+
+// Load selection handler into any newly opened compose or messageDisplay tab.
+const scripts = [{
+  id: "selectionHandler",
+  js: ["selectionHandler.js"]
+}];
+browser.scripting.compose.registerScripts(scripts);
+browser.scripting.messageDisplay.registerScripts(scripts);
 
 /*   The following expression statement is part of 'Guess the natural language of a text'.
  *   http://github.com/richtr/guessLanguage.js/lib/_languageData.js
